@@ -20,6 +20,9 @@ jobs:
    
    - name: List Files in Repository 
      run: ls -ls
+
+   - name: Running wrong command
+     run chmd 400
    
    - name: Print Runner OS
      run: echo "Runner OS is $RUNNER_OS"
