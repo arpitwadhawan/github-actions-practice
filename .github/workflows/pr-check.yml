@@ -10,4 +10,4 @@ jobs:
    
     steps:
      - name: Print PR branch
-       run: echo "PR check running for branch: $GITHUB_HEAD_REF"
+       run: 'echo "PR check running for branch: $GITHUB_HEAD_REF"'

@@ -1,0 +1,14 @@
+name: Scheduled Workflow using CRON
+on:
+  schedule:
+   - cron: '55 19 * * *'
+  workflow_dispatch:
+jobs:
+ my-job:
+  name: Schedule job
+  runs-on: ubuntu-latest
+  steps:
+   - name: Checkout code
+     uses: actions/checkout@v4
+   - name: Run daily Script
+     run : echo "Trigerred by cron schedule"
