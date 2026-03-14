@@ -3,10 +3,11 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
-        pyhton-version: ['3.10','3.11','3.12']
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['3.10','3.11','3.12']
+      runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
